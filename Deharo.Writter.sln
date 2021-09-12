@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deharo.Writter", "Deharo.Writter\Deharo.Writter.csproj", "{242C0BBC-A7EB-4DD3-99FE-0919A8C2FA8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deharo.Writter", "Deharo.Writter\Deharo.Writter.csproj", "{242C0BBC-A7EB-4DD3-99FE-0919A8C2FA8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deharo.Writter.Tests", "Deharo.Writter.Tests\Deharo.Writter.Tests.csproj", "{0F37659E-D240-4124-81AC-87823D71A36A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{242C0BBC-A7EB-4DD3-99FE-0919A8C2FA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{242C0BBC-A7EB-4DD3-99FE-0919A8C2FA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{242C0BBC-A7EB-4DD3-99FE-0919A8C2FA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F37659E-D240-4124-81AC-87823D71A36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F37659E-D240-4124-81AC-87823D71A36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F37659E-D240-4124-81AC-87823D71A36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F37659E-D240-4124-81AC-87823D71A36A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
