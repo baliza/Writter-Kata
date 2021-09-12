@@ -18,14 +18,14 @@ namespace Deharo.Writter.Tests
         public void Test_Creating_Writer_JSON()
         {
             var actual = container.Factory.CreateWritter(EFormatTypes.JSON);
-            Assert.AreEqual("json - Example in JSON", actual.ToString());
+            Assert.AreEqual("Local: json - JSON CREATED", actual.ToString());
         }
 
         [Test]
         public void Test_Creating_Writer_Monkey()
         {
             var actual = container.Factory.CreateWritter(EFormatTypes.TXT);
-            Assert.AreNotEqual("json - Example in JSON", actual.ToString());
+            Assert.AreNotEqual("Local: json - JSON CREATED", actual.ToString());
         }
 
         [Test]

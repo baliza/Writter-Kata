@@ -1,7 +1,8 @@
 ﻿using Deharo.Writter.Models;
+using Deharo.Writter.Models.Core;
 using Deharo.Writter.Services;
 using System;
-
+using System.Collections.Generic;
 
 namespace Deharo.Writter
 {
@@ -9,7 +10,7 @@ namespace Deharo.Writter
     {
         static void Main(string[] args)
         {
-            string fileName = "VuelingUniversityMarks";
+            string fileName = "VuelingUniversity";
             int option = 0;
             Console.WriteLine(@"Hi user, you've to choose an option of below!
     1.- Format your archive to JSON.
@@ -41,6 +42,8 @@ namespace Deharo.Writter
                     Console.WriteLine("That is not an option.");
                     break;
             }
+            VuelingUniversity vuelingUniversity = new VuelingUniversity();
+            Console.WriteLine(vuelingUniversity.ToString());
         }
     }
 }
