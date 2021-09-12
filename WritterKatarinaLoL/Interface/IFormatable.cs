@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WritterKatarinaLoL.Interface
 {
-    interface IFactorable
+    interface IFormatable
     {
     }
 }

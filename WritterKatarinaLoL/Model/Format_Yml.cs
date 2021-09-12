@@ -5,7 +5,7 @@ using WritterKatarinaLoL.Interface;
 
 namespace WritterKatarinaLoL.Model
 {
-    class Format_Yml : IFactorable
+    class Format_Yml : IFormatable
     {
     }
 }
