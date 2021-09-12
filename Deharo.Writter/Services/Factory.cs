@@ -24,7 +24,7 @@ namespace Deharo.Writter
 
         public override string ToString()
         {
-            return "{" + string.Join(",", _formatList.Select(kv => kv.Key + "=" + kv.Value).ToArray()) + "}"; ;
+            return "{" + string.Join(",", _formatList.Select(kv => kv.Key + "=" + kv.Value).ToArray()) + "}";
         }
     }
 }
