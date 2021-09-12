@@ -10,9 +10,9 @@ namespace Deharo.Writter
 {
     public class Factory
     {
-		private readonly Dictionary<EFormatTypes, IWritterFormatter> _formatList;
+		private readonly Dictionary<EFormatTypes, IWriterFormatter> _formatList;
 
-        public Factory(Dictionary<EFormatTypes, IWritterFormatter> formatList)
+        public Factory(Dictionary<EFormatTypes, IWriterFormatter> formatList)
         {
 			_formatList = formatList;
 		}

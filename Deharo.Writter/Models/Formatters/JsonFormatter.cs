@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Deharo.Writter.Models
 {
-    public class JsonFormatter : IWritterFormatter
+    public class JsonFormatter : IWriterFormatter
     {
         public string GetBody()
         {

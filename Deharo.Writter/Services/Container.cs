@@ -11,7 +11,7 @@ namespace Deharo.Writter.Services
 
         public Container()
         {
-            Factory = new Factory(new Dictionary<Models.EFormatTypes, Interfaces.IWritterFormatter> {
+            Factory = new Factory(new Dictionary<Models.EFormatTypes, Interfaces.IWriterFormatter> {
             {EFormatTypes.JSON, new JsonFormatter() },
             {EFormatTypes.TXT, new TxtFormatter() },
             {EFormatTypes.XML, new XmlFormatter() },

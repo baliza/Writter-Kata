@@ -7,9 +7,9 @@ namespace Deharo.Writter.Services
 {
     public class Writer : IWriter
     {
-        private IWritterFormatter _textFormatter;
+        private IWriterFormatter _textFormatter;
 
-        public Writer(IWritterFormatter formater)
+        public Writer(IWriterFormatter formater)
         {
             _textFormatter = formater;
         }

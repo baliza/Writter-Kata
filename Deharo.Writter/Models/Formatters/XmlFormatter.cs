@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Deharo.Writter.Models
 {
-    public class XmlFormatter : IWritterFormatter
+    public class XmlFormatter : IWriterFormatter
     {
         public string GetBody()
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Deharo.Writter.Interfaces
 {
-    public interface IWritterFormatter
+    public interface IWriterFormatter
     {
         public string GetBody();
         public string GetExtension();

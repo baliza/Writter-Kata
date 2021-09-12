@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Deharo.Writter.Models
 {
-    public class YmlFormatter : IWritterFormatter
+    public class YmlFormatter : IWriterFormatter
     {
         public string GetBody()
         {
@@ -15,6 +15,11 @@ namespace Deharo.Writter.Models
         public string GetExtension()
         {
             return "yml";
+        }
+
+        public override string ToString()
+        {
+            return "YmlFormatter";
         }
     }
 }
