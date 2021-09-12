@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Vueling_University xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StudentsList>
+    <Student>
+      <_Name>Nacho</_Name>
+      <_LastName>De Haro</_LastName>
+      <_IsFromDual>false</_IsFromDual>
+      <_Mark>8.43</_Mark>
+    </Student>
+    <Student>
+      <_Name>Maria</_Name>
+      <_LastName>Apellido1</_LastName>
+      <_IsFromDual>false</_IsFromDual>
+      <_Mark>6.93</_Mark>
+    </Student>
+    <Student>
+      <_Name>Arturo</_Name>
+      <_LastName>Apellido2</_LastName>
+      <_IsFromDual>true</_IsFromDual>
+      <_Mark>9.02</_Mark>
+    </Student>
+    <Student>
+      <_Name>Raul</_Name>
+      <_LastName>Cabrejas</_LastName>
+      <_IsFromDual>false</_IsFromDual>
+      <_Mark>7.43</_Mark>
+    </Student>
+    <Student>
+      <_Name>Javier</_Name>
+      <_LastName>Apellido3</_LastName>
+      <_IsFromDual>true</_IsFromDual>
+      <_Mark>8.43</_Mark>
+    </Student>
+  </StudentsList>
+</Vueling_University>
