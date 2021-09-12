@@ -5,13 +5,13 @@ using Deharo.Writter.Interfaces;
 
 namespace Deharo.Writter.Tests
 {
-    public class Tests
+    public class WriterTests
     {
-        Container container;
+        WriterContainer container;
         [SetUp]
         public void Setup()
         {
-            container = new Container();
+            container = new WriterContainer(false);
         }
 
         [Test]
@@ -31,8 +31,18 @@ namespace Deharo.Writter.Tests
         [Test]
         public void Test_CreateWriter_isEquals_to_Conventional()
         {
+            var actual = container.Factory.CreateWritter(EFormatTypes.JSON);
+            JsonFormatter iFormatter = new JsonFormatter();
+            Writer newWriter = new Writer(iFormatter);
+            Assert.AreEqual(newWriter.ToString(), actual.ToString());
+        }
+
+        [Test]
+        public void Test_CreateWriter_isNotEquals_to_Conventional_ByMonkey()
+        {
+            // Is txt not a JSON formatType
             var actual = container.Factory.CreateWritter(EFormatTypes.TXT);
-            IWriterFormatter iFormatter = new JsonFormatter();
+            JsonFormatter iFormatter = new JsonFormatter();
             Writer newWriter = new Writer(iFormatter);
             Assert.AreNotEqual(newWriter.ToString(), actual.ToString());
         }

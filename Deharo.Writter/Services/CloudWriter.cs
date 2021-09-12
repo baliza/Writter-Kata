@@ -5,18 +5,18 @@ using System.Text;
 
 namespace Deharo.Writter.Services
 {
-    public class Writer : IWriter
+    public class CloudWriter : IWriter
     {
         private IWriterFormatter _textFormatter;
 
-        public Writer(IWriterFormatter formater)
+        public CloudWriter(IWriterFormatter formater)
         {
             _textFormatter = formater;
         }
 
         public void WriteBody(string fileName)
         {
-            Console.WriteLine($"Archive created: {fileName}.{_textFormatter.GetExtension()} with body: {_textFormatter.GetBody()}");
+            Console.WriteLine($"Archive created on cloud: {fileName}.{_textFormatter.GetExtension()} with body: {_textFormatter.GetBody()}");
         }
     
        /* public string GetArchiveBody(string fileName)
@@ -26,7 +26,7 @@ namespace Deharo.Writter.Services
 
         public override string ToString()
         {
-            return $"Local: {_textFormatter.GetExtension()} - {_textFormatter.GetBody()}";
+            return $"Cloud: {_textFormatter.GetExtension()} - {_textFormatter.GetBody()}";
         }
     }
 }

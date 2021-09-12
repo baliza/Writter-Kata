@@ -6,13 +6,13 @@ using System.Collections.Generic;
 
 namespace Deharo.Writter.Tests
 {
-    class Factory_Tests
+    class FactoryTests
     {
-        Container container;
+        WriterContainer container;
         [SetUp]
         public void Setup()
         {
-            container = new Container();
+            container = new WriterContainer(true);
         }
 
         [Test]

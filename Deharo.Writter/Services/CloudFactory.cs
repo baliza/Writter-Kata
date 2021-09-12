@@ -8,19 +8,19 @@ using System.Text;
 
 namespace Deharo.Writter
 {
-    public class Factory : IFactory
+    public class CloudFactory : IFactory
     {
-        private readonly Dictionary<EFormatTypes, IWriterFormatter> _formatList;
+		private readonly Dictionary<EFormatTypes, IWriterFormatter> _formatList;
 
-        public Factory(Dictionary<EFormatTypes, IWriterFormatter> formatList)
+        public CloudFactory(Dictionary<EFormatTypes, IWriterFormatter> formatList)
         {
-            _formatList = formatList;
-        }
+			_formatList = formatList;
+		}
 
-        public IWriter CreateWritter(EFormatTypes type)
-        {
-            return new Writer(_formatList[type]);
-        }
+		public IWriter CreateWritter(EFormatTypes type)
+		{
+			return new CloudWriter(_formatList[type]);
+		}
 
         public override string ToString()
         {
