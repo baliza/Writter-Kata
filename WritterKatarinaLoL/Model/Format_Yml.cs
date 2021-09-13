@@ -7,5 +7,14 @@ namespace WritterKatarinaLoL.Model
 {
     class Format_Yml : IFormatable
     {
+        public string GetContent()
+        {
+            return "Contenido en formato yml";
+        }
+
+        public string GetExtension()
+        {
+            return "yml";
+        }
     }
 }

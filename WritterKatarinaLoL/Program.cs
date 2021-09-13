@@ -1,4 +1,5 @@
 ﻿using System;
+using WritterKatarinaLoL.Model;
 
 namespace WritterKatarinaLoL
 {
@@ -37,7 +38,8 @@ namespace WritterKatarinaLoL
     //  y cada vez que le pidas uno te devuelva el montado (tip: 2 FactoryWriters + el builder le pasamos la decisión, utilizad IFs en el contenedor)
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var container = new Container();
+            container.Factory.GetWritter("json").Write("Archivo");
         }
     }
 }
