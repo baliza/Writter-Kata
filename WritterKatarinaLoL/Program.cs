@@ -43,9 +43,28 @@ namespace WritterKatarinaLoL
             Console.WriteLine("¿Quieres escribir en la nube o en un archivo? Escribe 'Archivo' o 'Nube'");
             string respuestaUser = Console.ReadLine();
 
-            //Iniciar un objeto contenedor el cual recibirá un objecto de Factory (GetWritter) y otro de Writter (Writte)
             var container = new Container();
-            container.Factory.GetWritter("txt").Write("NombreArchivo");
+            
+
+            switch (respuestaUser)
+            {
+                case "Archivo":
+                    Console.WriteLine($"Has elegido escribir en un archivo.");
+                    container.Factory.GetWritter("txt").Write("NombreArchivo");
+                    break;
+
+                case "Nube":
+                    Console.WriteLine($"Has elegido escribir en la nube.");
+                    container.Factory.GetWritter("txt").Write("NombreArchivo");
+                    break;
+
+                default:
+                    Console.WriteLine($"Has escrito mal la respuesta.");
+                    break;
+            }
+
+            //Iniciar un objeto contenedor el cual recibirá un objecto de Factory (GetWritter) y otro de Writter (Writte)
+            
         }
     }
 }
