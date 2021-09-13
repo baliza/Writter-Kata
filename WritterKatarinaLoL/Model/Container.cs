@@ -8,7 +8,7 @@ namespace WritterKatarinaLoL.Model
     class Container
     {
         /// <summary>
-        /// Diccionario para guardar los formatos de los archivos
+        /// Diccionario para guardar los formatos de los archivos (string para el nombre, iniciar objeto)
         /// </summary>
         public Dictionary<string, IFormatable> FormatList = new Dictionary<string, IFormatable> {
             {"json", new Format_Json() },

@@ -42,7 +42,7 @@ namespace WritterKatarinaLoL
         {
             //Iniciar un objeto contenedor el cual recibirá un objecto de Factory (GetWritter) y otro de Writter (Writte)
             var container = new Container();
-            container.Factory.GetWritter("json").Write("Archivo");
+            container.Factory.GetWritter("txt").Write("NombreArchivo");
         }
     }
 }
