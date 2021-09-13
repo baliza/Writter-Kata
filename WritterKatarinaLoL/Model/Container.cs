@@ -18,9 +18,26 @@ namespace WritterKatarinaLoL.Model
         };
 
         public Factory Factory;
-        public Container() //constructor de contenedor, el cual crea un objeto Factory y le pasamos el diccionario como parámetro
+        public FactoryCloud FactoryCloud;
+
+        public Container(string respuestaUser) //constructor de contenedor, el cual crea un objeto Factory y le pasamos el diccionario como parámetro
         {
-            Factory = new Factory(FormatList);
+            switch (respuestaUser)
+            {
+                case "Local":
+                    Console.WriteLine($"Has elegido escribir en un archivo en local.");
+                    Factory.GetWritter("txt").Write("NombreArchivoEnLocal");
+                    break;
+
+                case "Nube":
+                    Console.WriteLine($"Has elegido escribir en la nube.");
+                    FactoryCloud.GetWritter("json").Write("NombreArchivoEnLaNube");
+                    break;
+
+                default:
+                    Console.WriteLine($"Has escrito mal la respuesta.");
+                    break;
+            }
         }
     }
 }
