@@ -18,7 +18,7 @@ namespace WritterKatarinaLoL.Model
         };
 
         public Factory Factory;
-        public Container() //constructor de contenedor, el cual crea un objeto Factory y le pasamos el diccionario como parametro
+        public Container() //constructor de contenedor, el cual crea un objeto Factory y le pasamos el diccionario como parámetro
         {
             Factory = new Factory(FormatList);
         }

@@ -36,8 +36,11 @@ namespace WritterKatarinaLoL
     //Ahora, cambias la lógica para que cdo empiece la aplicación lo primero que hagáis es una pregunta preguntando si quieres
     //  que escriba en un archivo o en la nube (no es necesario que lo haga) y después monte el contenedor basándose en esta decisión
     //  y cada vez que le pidas uno te devuelva el montado (tip: 2 FactoryWriters + el builder le pasamos la decisión, utilizad IFs en el contenedor)
+
+
         static void Main(string[] args)
         {
+            //Iniciar un objeto contenedor el cual recibirá un objecto de Factory (GetWritter) y otro de Writter (Writte)
             var container = new Container();
             container.Factory.GetWritter("json").Write("Archivo");
         }

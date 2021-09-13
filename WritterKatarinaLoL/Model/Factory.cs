@@ -16,8 +16,6 @@ namespace WritterKatarinaLoL.Model
         public Writter GetWritter(string formater)
         {
             return new Writter(_formatList[formater]);
-
         }
     }
 }
-    
