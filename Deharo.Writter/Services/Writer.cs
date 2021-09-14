@@ -1,6 +1,8 @@
 ﻿using Deharo.Writter.Interfaces;
+using Deharo.Writter.Models.Core;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Deharo.Writter.Services
@@ -14,9 +16,10 @@ namespace Deharo.Writter.Services
             _textFormatter = formater;
         }
 
-        public void WriteBody(string fileName)
+        public void WriteBody(string fileName, VuelingUniversity vUni)
         {
-            Console.WriteLine($"Archive created: {fileName}.{_textFormatter.GetExtension()} with body: {_textFormatter.GetBody()}");
+            File.WriteAllText(@$"C:\Users\gteam\source\repos\Writter-Kata\TargetArchive\{fileName}.{_textFormatter.GetExtension()}", _textFormatter.GetBody(vUni));
+            Console.WriteLine($"Archive created: {fileName}.{_textFormatter.GetExtension()} with body: {_textFormatter.GetBody(vUni)}");
         }
     
        /* public string GetArchiveBody(string fileName)
@@ -26,7 +29,7 @@ namespace Deharo.Writter.Services
 
         public override string ToString()
         {
-            return $"Local: {_textFormatter.GetExtension()} - {_textFormatter.GetBody()}";
+            return $"Local: {_textFormatter.GetExtension()}";
         }
     }
 }

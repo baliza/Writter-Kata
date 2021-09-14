@@ -9,9 +9,8 @@ namespace Deharo.Writter.Models
 {
     public class TxtFormatter : IWriterFormatter
     {
-        public string GetBody()
+        public string GetBody(VuelingUniversity vUniversity)
         {
-            VuelingUniversity vUniversity = new VuelingUniversity();
 
             File.WriteAllText(@"C:\Users\gteam\source\repos\Writter-Kata\VuelingUniversity.txt", vUniversity.ToString());
             return "TXT CREATED";

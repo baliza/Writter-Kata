@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <_Name>Javier</_Name>
+      <_LastName>Apellido3</_LastName>
+      <_IsFromDual>true</_IsFromDual>
+      <_Mark>8.43</_Mark>
+</Student>

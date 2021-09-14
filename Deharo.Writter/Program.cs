@@ -20,30 +20,35 @@ namespace Deharo.Writter
 
             Int32.TryParse(Console.ReadLine(), out option);
             // TRUE = CLOUD .. FALSE = LOCAL
-            WriterContainer container = new WriterContainer(true);
+            WriterContainer container = new WriterContainer(false);
+            VuelingUniversity vUni = new VuelingUniversity();
+            vUni.StudentsList.Clear();
             switch (option)
             {
                 case 0:
-                    Console.WriteLine("This is not a number.");
+                    Console.WriteLine("This is not a correct number.");
                     break;
                 case 1:
-                    container.Factory.CreateWritter(EFormatTypes.JSON).WriteBody(fileName);
+                    vUni = Reader.LoadFromXMLString(@"C:\Users\gteam\source\repos\Writter-Kata\SourceArchive");
+                    vUni.StudentsList.Add(new Student("Antonio", "De Haro2", true, 5.43));
+                    container.Factory.CreateWritter(EFormatTypes.JSON).WriteBody(fileName, vUni);
                     break;
                 case 2:
-                    container.Factory.CreateWritter(EFormatTypes.TXT).WriteBody(fileName);
+                    container.Factory.CreateWritter(EFormatTypes.TXT).WriteBody(fileName, vUni);
                     break;
                 case 3:
-                    container.Factory.CreateWritter(EFormatTypes.XML).WriteBody(fileName);
+                    vUni = Reader.LoadFromXMLString(@"C:\Users\gteam\source\repos\Writter-Kata\SourceArchive");
+                    vUni.StudentsList.Add(new Student("Antonio", "De Haro2", true, 5.43));
+                    container.Factory.CreateWritter(EFormatTypes.XML).WriteBody(fileName, vUni);
                     break;
                 case 4:
-                    container.Factory.CreateWritter(EFormatTypes.YML).WriteBody(fileName);
+                    container.Factory.CreateWritter(EFormatTypes.YML).WriteBody(fileName, vUni);
                     break;
                 default:
                     Console.WriteLine("That is not an option.");
                     break;
             }
-            VuelingUniversity vuelingUniversity = new VuelingUniversity();
-            Console.WriteLine(vuelingUniversity.ToString());
+            //Console.WriteLine(vUni.ToString());
         }
     }
 }

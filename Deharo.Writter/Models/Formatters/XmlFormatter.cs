@@ -5,28 +5,28 @@ using System.Text;
 using System.Xml.Serialization;
 using System.IO;
 using Deharo.Writter.Models.Core;
+using System.Xml;
 
 namespace Deharo.Writter.Models
 {
     public class XmlFormatter : IWriterFormatter
     {
-        public string GetBody()
+        public string GetBody(VuelingUniversity vUniversity)
         {
-            VuelingUniversity vUniversity = new VuelingUniversity();
+            
+            XmlSerializer xsSubmit = new XmlSerializer(typeof(VuelingUniversity));
+            var xml = "";
 
-/*            XmlSerializer xs = new XmlSerializer(typeof(VuelingUniversity));
-
-            TextWriter txtWriter = new StreamWriter(@"C:\Users\gteam\source\repos\Writter-Kata\Serialization.xml");
-
-            xs.Serialize(txtWriter, vUniversity);*/
-            XmlSerializer ser = new XmlSerializer(typeof(VuelingUniversity));
-
-            using (FileStream fs = new FileStream(@"C:\Users\gteam\source\repos\Writter-Kata\VuelingUniversity.xml", FileMode.Create))
+            using (var sww = new StringWriter())
             {
-                ser.Serialize(fs, vUniversity);
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xsSubmit.Serialize(writer, vUniversity);
+                    xml = sww.ToString(); // Your XML
+                    Console.WriteLine(xml);
+                    return xml;
+                }
             }
-
-            return "XML CREATED";
         }
 
         public string GetExtension()

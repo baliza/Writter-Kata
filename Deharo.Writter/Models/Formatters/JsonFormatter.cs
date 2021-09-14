@@ -10,14 +10,11 @@ namespace Deharo.Writter.Models
 {
     public class JsonFormatter : IWriterFormatter
     {
-        public string GetBody()
+        public string GetBody(VuelingUniversity vUni)
         {
-            VuelingUniversity vUniversity = new VuelingUniversity();
-
-            var json = JsonSerializer.Serialize(vUniversity);
-            File.WriteAllText(@"C:\Users\gteam\source\repos\Writter-Kata\VuelingUniversity.json", json);
-
-            return "JSON CREATED";
+            var json = JsonSerializer.Serialize(vUni);
+            //File.WriteAllText(@"C:\Users\gteam\source\repos\Writter-Kata\VuelingUniversity.json", json);
+            return json;
         }
 
         public string GetExtension()

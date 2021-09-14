@@ -1,7 +1,9 @@
-﻿namespace Deharo.Writter.Services
+﻿using Deharo.Writter.Models.Core;
+
+namespace Deharo.Writter.Services
 {
     public interface IWriter
     {
-        void WriteBody(string fileName);
+        void WriteBody(string fileName, VuelingUniversity vUni);
     }
 }

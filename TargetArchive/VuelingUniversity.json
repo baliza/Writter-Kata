@@ -1,0 +1,40 @@
+{
+	"StudentsList": [
+		{
+			"_Name": "Raul",
+			"_LastName": "De Haro",
+			"_IsFromDual": false,
+			"_Mark": 8.43
+		},
+		{
+			"_Name": "Maria",
+			"_LastName": "Apellido1",
+			"_IsFromDual": false,
+			"_Mark": 6.93
+		},
+		{
+			"_Name": "Raul",
+			"_LastName": "Cabrejas",
+			"_IsFromDual": false,
+			"_Mark": 7.43
+		},
+		{
+			"_Name": "Nacho",
+			"_LastName": "De Haro",
+			"_IsFromDual": false,
+			"_Mark": 8.43
+		},
+		{
+			"_Name": "Javier",
+			"_LastName": "Apellido3",
+			"_IsFromDual": true,
+			"_Mark": 8.43
+		},
+		{
+			"_Name": "Antonio",
+			"_LastName": "De Haro2",
+			"_IsFromDual": true,
+			"_Mark": 5.43
+		}
+	]
+}

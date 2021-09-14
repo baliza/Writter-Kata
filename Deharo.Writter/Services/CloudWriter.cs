@@ -1,6 +1,8 @@
 ﻿using Deharo.Writter.Interfaces;
+using Deharo.Writter.Models.Core;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Deharo.Writter.Services
@@ -14,19 +16,20 @@ namespace Deharo.Writter.Services
             _textFormatter = formater;
         }
 
-        public void WriteBody(string fileName)
+        public void WriteBody(string fileName, VuelingUniversity vUni)
         {
-            Console.WriteLine($"Archive created on cloud: {fileName}.{_textFormatter.GetExtension()} with body: {_textFormatter.GetBody()}");
+            File.WriteAllText(@$"C:\Users\gteam\source\repos\Writter-Kata\VuelingUniversity.{_textFormatter.GetExtension()}", _textFormatter.GetBody(vUni));
+            Console.WriteLine($"Archive created Cloud: {fileName}.{_textFormatter.GetExtension()} with body: {_textFormatter.GetBody(vUni)}");
         }
-    
-       /* public string GetArchiveBody(string fileName)
-        {
-            return $"Archive created: {fileName}.{ _textFormatter.GetExtension()} with body: { _textFormatter.GetBody()}";
-        }*/
+
+        /* public string GetArchiveBody(string fileName)
+         {
+             return $"Archive created: {fileName}.{ _textFormatter.GetExtension()} with body: { _textFormatter.GetBody()}";
+         }*/
 
         public override string ToString()
         {
-            return $"Cloud: {_textFormatter.GetExtension()} - {_textFormatter.GetBody()}";
+            return $"Cloud: {_textFormatter.GetExtension()}";
         }
     }
 }
