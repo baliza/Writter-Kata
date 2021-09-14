@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WritterJavi.Interface;
 using WritterKatarinaLoL.Interface;
 
 namespace WritterKatarinaLoL.Model
@@ -17,27 +18,30 @@ namespace WritterKatarinaLoL.Model
             {"yml", new Format_Yml() }
         };
 
-        public Factory Factory;
-        public FactoryCloud FactoryCloud;
+        public Factory _factory;
+        public FactoryCloud _factoryCloud;
 
-        public Container(string respuestaUser) //constructor de contenedor, el cual crea un objeto Factory y le pasamos el diccionario como parámetro
+        public Container() 
         {
-            switch (respuestaUser)
-            {
-                case "Local":
-                    Console.WriteLine($"Has elegido escribir en un archivo en local.");
-                    Factory.GetWritter("txt").Write("NombreArchivoEnLocal");
-                    break;
+          
+        }
 
-                case "Nube":
-                    Console.WriteLine($"Has elegido escribir en la nube.");
-                    FactoryCloud.GetWritter("json").Write("NombreArchivoEnLaNube");
-                    break;
+        /// <summary>
+        /// un Build que devuelve una interfaz IFactory 8de esta manera sirve para ambos constructores) y le pasamos el tipoFactory
+        /// mediante un string, que es la respuestaUser
+        /// y con el "if" retornamos un constructor u otro
+        /// </summary>
+        /// <param name="tipoFactory"></param>
+        /// <returns></returns>
+        public IFactory Build(string tipoFactory)
+        {
+            //  if(tipoFactory == "Local")
+            //  {
+            //      return new Factory(FormatList);
+            //  }
+            //      return new FactoryCloud(FormatList);
 
-                default:
-                    Console.WriteLine($"Has escrito mal la respuesta.");
-                    break;
-            }
+             return tipoFactory == "Local"?  (IFactory)new Factory(FormatList) :  (IFactory)new FactoryCloud(FormatList);
         }
     }
 }

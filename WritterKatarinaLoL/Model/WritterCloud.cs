@@ -5,7 +5,7 @@ using WritterKatarinaLoL.Interface;
 
 namespace WritterKatarinaLoL.Model
 {
-    class WritterCloud
+    class WritterCloud : IWritter
     {
         //Inicia un "objeto" de la interfaz, de esta manera podremos acceder
         //a todos las clases que tengan implementada esta interfaz

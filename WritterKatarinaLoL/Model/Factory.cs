@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WritterJavi.Interface;
 using WritterKatarinaLoL.Interface;
 
 namespace WritterKatarinaLoL.Model
 {
-    class Factory
+    class Factory : IFactory
     {
         //inicia un diccionario
         private readonly Dictionary<string, IFormatable> _formatList;
@@ -18,9 +19,10 @@ namespace WritterKatarinaLoL.Model
 
         //Método para devolver un objeto Writter iniciado,
         //el string "formater" será el que defina el tipo de archivo del diccionario
-        public Writter GetWritter(string formater)
+        public IWritter GetWritter(string formater)
         {
             return new Writter(_formatList[formater]);
         }
+
     }
 }

@@ -9,7 +9,7 @@ namespace WritterKatarinaLoL.Interface
         /// <summary>
         /// Implementará los métodos en las clases de los archivos
         /// </summary>
-        /// <returns></returns>
+        
         string GetExtension();
         string GetContent();
     }
